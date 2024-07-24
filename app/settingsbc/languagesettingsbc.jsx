@@ -1,15 +1,17 @@
 "use client";
 import { useState } from "react";
-import { createLanguageCookie } from "./formactions";
+import { createLanguageCookie } from "../settings/formactions";
 import Link from "next/link";
+import { getCookie } from "cookies-next";
 
-function LanguageSettings({ languageId = 1 }) {
-  const [formLanguageId, setFormLanguageId] = useState(languageId);
+// BC - Browser Cookie
+function LanguageSettingsBC() {
+  const [formLanguageId, setFormLanguageId] = useState(
+    getCookie("languageId") ?? ""
+  );
   return (
     <form action={createLanguageCookie}>
-      <h2 className="text-xl">
-        Prop version (current cookie value passed as prop)
-      </h2>
+      <h2 className="text-xl">Browser Cookie version (uses cookies-next)</h2>
       <label htmlFor="idLanguageId" className="mr-1">
         languageId
       </label>
@@ -37,4 +39,4 @@ function LanguageSettings({ languageId = 1 }) {
     </form>
   );
 }
-export default LanguageSettings;
+export default LanguageSettingsBC;
