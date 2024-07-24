@@ -24,9 +24,9 @@ function LanguageSettings({ languageId = 1 }) {
       <br />
       <button
         type="submit"
-        className="my-4 p-2 border border-black rounded-md bg-black text-white"
+        className="my-4 p-2 border border-black rounded-md bg-black text-white active:scale-90"
       >
-        Set Language Cookie
+        Set languageId Cookie
       </button>
       <Link href="/" className="ml-4 underline">
         Home

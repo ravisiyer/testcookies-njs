@@ -1,1 +1,1 @@
-This tiny Next.js 14 app is a small trial and example of using React createContext method and useContext hook to share application settings data across some components of the app which have to be client components, with some other server component(s) using/including these client components.
+This tiny Next.js 14 app is a small trial and example of using Cookies in Next.js to share application settings data across some components of the app.

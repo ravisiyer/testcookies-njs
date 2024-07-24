@@ -22,11 +22,16 @@ export default function Home() {
         </a>
       </p> */}
       <hr className="border-black border my-4" />
+      <p>
+        This server component Home page retrieves the languageId cookie and
+        shows its value below.
+      </p>
       <p>languageId: {languageId ? languageId.value : "Cookie not found"}</p>
       <hr className="border-black border my-4" />
       <p className="my-4">
-        Below link goes to another page which is a client component which edits
-        languageId and provides user to save the cookie(s).
+        Below link goes to another page which is a server component which
+        includes a client component that edits languageId and provides user an
+        option to save the cookie.
       </p>
       <Link
         href={
