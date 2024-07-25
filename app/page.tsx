@@ -26,13 +26,14 @@ export default function Home() {
         This server component Home page retrieves the languageId cookie and
         shows its value below.
       </p>
-      <p>languageId: {languageId ? languageId.value : "Cookie not found"}</p>
+      <p className="mt-4">
+        languageId: {languageId ? languageId.value : "Cookie not found"}
+      </p>
       <hr className="border-black border my-4" />
       <p className="my-4">
-        Below link goes to another page which is passed current value of
-        languageId as a prop and which is a server component. It includes a
-        client component that edits languageId and provides user an option to
-        save the cookie.
+        Below link goes to another page which is a client component and is
+        passed current value of languageId as query string (searchParams page
+        prop). It allows the user to edit languageId and set the cookie.
       </p>
       <Link
         href={
@@ -44,10 +45,10 @@ export default function Home() {
       </Link>
       <hr className="border-black border my-4" />
       <p className="my-4">
-        Below link goes to another page which is a server component without any
-        props. It includes a client component that retrieves current value of
-        languageId cookie and allows user to edit languageId and save the
-        cookie.
+        Below link goes to another page which is a client component without any
+        query string (searchParams page prop). It retrieves current value of
+        languageId cookie (using cookies-next) and allows the user to edit
+        languageId and set the cookie.
       </p>
       <Link href={"/settingsbc"} className="underline my-4">
         Edit languageId
